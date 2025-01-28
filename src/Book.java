@@ -22,6 +22,9 @@ public class Book {
     public boolean isAvailable() {
         return isAvailable;
     }
+    public void setIsAvailable(){
+        isAvailable = false;
+    }
 
     public double calculateBasePrice(double noOfDays) {
         return basePrice * noOfDays;
