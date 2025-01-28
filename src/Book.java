@@ -7,7 +7,7 @@ public class Book {
     public Book(String bookName, String authorName,double basePrice) {
         this.bookName = bookName;
         this.authorName = authorName;
-        this.isAvailable = false;
+        this.isAvailable = true;
         this.basePrice = basePrice;
     }
 
@@ -18,15 +18,18 @@ public class Book {
     public String getAuthorName() {
         return authorName;
     }
+    public double getBasePrice(){
+        return  basePrice;
+    }
 
     public boolean isAvailable() {
         return isAvailable;
     }
-    public void setIsAvailable(){
-        isAvailable = false;
+    public void setIsAvailable(boolean value){
+        isAvailable = value;
     }
 
-    public double calculateBasePrice(double noOfDays) {
-        return basePrice * noOfDays;
+    public int calculateBasePrice(int noOfDays) {
+        return (int) (basePrice * noOfDays);
     }
 }
